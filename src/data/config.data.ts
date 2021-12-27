@@ -8,6 +8,6 @@ export const siteData: IConfig = {
   siteUrl: process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
     : 'https://nihilapp.github.io',
-  siteImage: '/images/blog-image.png',
+  siteImage: '/images/site-image.png',
   siteVersion: 'v1.0.0',
 };

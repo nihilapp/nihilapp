@@ -16,3 +16,10 @@ export interface ISiteMetaProps {
 export interface IHaveChildren {
   children: React.ReactNode;
 }
+
+export interface IAppData {
+  title: string;
+  url: string;
+  image: string;
+  description: string;
+}
