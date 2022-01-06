@@ -6,76 +6,83 @@ import { useSiteMeta } from '@/hooks';
 import { sizeData } from '@/data';
 
 const NotPonud404 = () => {
-  const NotPound404Style = css({
-    marginTop: '50px',
+  const NotPound404Style = css`
+    margin-top: 50px;
 
-    '& > h2': {
-      padding: '20px 10px',
-      color: '#ffffff',
-      backgroundColor: '#333333',
-      borderRadius: '10px',
-      textAlign: 'center',
-      lineHeight: '1',
-      marginBottom: '40px',
-      fontWeight: '900',
-      letterSpacing: '-1px',
-    },
+    & > h2 {
+      padding: 20px 10px;
+      color: #ffffff;
+      background-color: #333333;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 40px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
 
-    '& > p': {
-      textAlign: 'center',
-      color: '#333333',
-      fontWeight: '500',
-      letterSpacing: '-1px',
+    & > p {
+      text-align: center;
+      color: #333333;
+      font-weight: 500;
+      letter-spacing: -1px;
 
-      '& > a': {
-        display: 'inline-block',
-        marginTop: '20px',
-        padding: '10px',
-        lineHeight: '1',
-        borderRadius: '10px',
-        backgroundColor: '#33333330',
-        color: '#555555',
+      & > a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px;
+        line-height: 1;
+        border-radius: 10px;
+        background-color: #33333330;
+        color: #555555;
 
-        '&:hover': {
-          color: '#ffffff',
-          backgroundColor: '#333333',
-        },
-      },
-    },
+        &:hover {
+          color: #ffffff;
+          background-color: #333333;
+        }
+      }
+    }
 
-    '@media all and (min-width: 1024px)': {
-      '& > h2': {
-        fontSize: `${sizeData[6]}`,
-      },
-      '& > p': {
-        fontSize: `${sizeData[3]}`,
-      },
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      '& > h2': {
-        fontSize: `${sizeData[5]}`,
-      },
-      '& > p': {
-        fontSize: `${sizeData[3]}`,
-      },
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      '& > h2': {
-        fontSize: `${sizeData[5]}`,
-      },
-      '& > p': {
-        fontSize: `${sizeData[2]}`,
-      },
-    },
-    '@media all and (max-width: 479px)': {
-      '& > h2': {
-        fontSize: `${sizeData[4]}`,
-      },
-      '& > p': {
-        fontSize: `${sizeData[2]}`,
-      },
-    },
-  });
+    @media all and (min-width: 1024px) {
+      & > h2 {
+        font-size: ${sizeData[6]};
+      }
+
+      & > p {
+        font-size: ${sizeData[3]};
+      }
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      & > h2 {
+        font-size: ${sizeData[5]};
+      }
+
+      & > p {
+        font-size: ${sizeData[3]};
+      }
+    }
+
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      & > h2 {
+        font-size: ${sizeData[5]};
+      }
+
+      & > p {
+        font-size: ${sizeData[2]};
+      }
+    }
+
+    @media all and (max-width: 479px) {
+      & > h2 {
+        font-size: ${sizeData[4]};
+      }
+
+      & > p {
+        font-size: ${sizeData[2]};
+      }
+    }
+  `;
 
   const meta = useSiteMeta({
     title: '404',

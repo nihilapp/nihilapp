@@ -7,9 +7,9 @@ import { appData } from '@/data/app.data';
 import { ProjectItem } from '@/components/Content';
 
 const IndexPage = () => {
-  const IndexPageStyle = css({
-    marginTop: '50px',
-  });
+  const IndexPageStyle = css`
+    margin-top: 50px;
+  `;
 
   const meta = useSiteMeta({
     title: '홈',
@@ -21,7 +21,13 @@ const IndexPage = () => {
       <AppLayout meta={meta}>
         <div id='index-page' css={IndexPageStyle}>
           {appData.map((item) => (
-            <ProjectItem key={uuid()} title={item.title} url={item.url} image={item.image} description={item.description} />
+            <ProjectItem
+              key={uuid()}
+              title={item.title}
+              url={item.url}
+              image={item.image}
+              description={item.description}
+            />
           ))}
         </div>
       </AppLayout>
